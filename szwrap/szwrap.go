@@ -53,7 +53,9 @@ extern swig_intgo _wrap_SZ_encoder_enabled_szwrap_f010b74e9bb20381(void);
 */
 import "C"
 
-import "unsafe"
+import (
+	"unsafe"
+)
 import _ "runtime/cgo"
 import "sync"
 
