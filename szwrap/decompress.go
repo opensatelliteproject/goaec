@@ -31,6 +31,10 @@ func NOAADecompress(input []byte, bitsPerPixel, pixelsPerBlock, pixelsPerScanlin
 	output = make([]byte, pixelsPerScanline*bitsToBytes(bitsPerPixel))
 	destLen := int64(len(output))
 
+	if len(input) == 0 {
+		return output, nil
+	}
+
 	inputPtr := uintptr(unsafe.Pointer(&input[0]))
 	outputPtr := uintptr(unsafe.Pointer(&output[0]))
 
